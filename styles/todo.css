@@ -1,0 +1,59 @@
+*, :before, :after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+main.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+
+.inputWrapper {
+    width: 100%;
+    background-color: lightgray;
+}
+
+.inputWrapper * {
+    font: 1.5rem/1.2 sans-serif;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+.inputWrapper input {
+    width: 70%;
+}
+
+.inputWrapper button#addBtn {
+    width: 20%;
+    margin-left: 20px;
+    background-color: green;
+    color: white;
+}
+
+.inputWrapper button#addBtn:hover {
+    background-color: white;
+    color: green;
+}
+
+div#result {
+    padding: 30px 40px;
+    background-color: whitesmoke;
+}
+
+div#result li {
+    font: 1.5rem/1.2 sans-serif;
+}
+
+div#result li label {
+    margin-left: 5px;
+}
