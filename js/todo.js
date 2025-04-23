@@ -4,8 +4,14 @@ const resultSection = document.getElementById("result");
 function addListItems(inputText) {
     addListItems.counter = (addListItems.counter || 0) + 1;
     const listItem = document.createElement("li");
-    listItem.id = `item-${addListItems.counter}`;
-    listItem.textContent = inputText;
+    const addInput = document.createElement("input");
+    addInput.type = "checkbox";
+    addInput.id = `item-${addListItems.counter}`;
+    const addLabel = document.createElement("label");
+    addLabel.for = `item-${addListItems.counter}`;
+    addLabel.textContent = inputText;
+    listItem.appendChild(addInput);
+    listItem.appendChild(addLabel);
     let ul = resultSection.querySelector("ul");
     if (!ul) {
         ul = document.createElement("ul");
