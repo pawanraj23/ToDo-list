@@ -8,7 +8,7 @@ function addListItems(inputText) {
     addInput.type = "checkbox";
     addInput.id = `item-${addListItems.counter}`;
     const addLabel = document.createElement("label");
-    addLabel.for = `item-${addListItems.counter}`;
+    addLabel.htmlFor = `item-${addListItems.counter}`;
     addLabel.textContent = inputText;
     listItem.appendChild(addInput);
     listItem.appendChild(addLabel);
@@ -26,4 +26,15 @@ document.querySelector("#addBtn").addEventListener("click", function () {
         addListItems(getText);
         inputText.value = '';
     }
+});
+
+document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+    checkbox.addEventListener("click", function(){
+        alert(this.checked);
+        this.nextElementSibling.style.textDecoration = "line-through";
+        const getLI  = this.parentNode;
+        getLI.class = "completed";
+        const getUL = getLI.parentNode;
+        getUL.appendChild(getLI);
+    });
 });
