@@ -30,11 +30,17 @@ document.querySelector("#addBtn").addEventListener("click", function () {
 
 document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
     checkbox.addEventListener("click", function(){
-        //alert(this.checked);
-        this.nextElementSibling.style.textDecoration = "line-through";
         const getLI  = this.parentNode;
-        //getLI.class = "completed";
         const getUL = getLI.parentNode;
-        getUL.appendChild(getLI);
+        if(this.checked) {
+            this.nextElementSibling.style.textDecoration = "line-through";
+            getLI.setAttribute("class", "completed");
+            getUL.appendChild(getLI);
+        }
+        else {
+            this.nextElementSibling.style.textDecoration = "line-through";
+            getLI.class = "";
+            getUL.appendChild(getLI);satisfies
+        }
     });
 });
