@@ -39,8 +39,8 @@ document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
         }
         else {
             this.nextElementSibling.style.textDecoration = "line-through";
-            getLI.class = "";
-            getUL.appendChild(getLI);satisfies
+            getLI.removeAttribute("class");
+            getUL.appendChild(getLI);
         }
     });
 });
