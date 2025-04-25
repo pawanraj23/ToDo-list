@@ -30,10 +30,10 @@ document.querySelector("#addBtn").addEventListener("click", function () {
 
 document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
     checkbox.addEventListener("click", function(){
-        alert(this.checked);
+        //alert(this.checked);
         this.nextElementSibling.style.textDecoration = "line-through";
         const getLI  = this.parentNode;
-        getLI.class = "completed";
+        //getLI.class = "completed";
         const getUL = getLI.parentNode;
         getUL.appendChild(getLI);
     });
